@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whisker's | The Men's Code</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --white: #ffffff;
+      --pearl: #f2f2f2;
+      --black: #0d0d0d;
+      --gray: #777;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--pearl);
+      color: var(--black);
+    }
+
+    header {
+      width: 100%;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.9);
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      opacity: 0.85;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-top: -5px;
+    }
+
+    nav a {
+      margin: 0 18px;
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .icons i {
+      margin-left: 18px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .hero {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 10%;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .hero p {
+      margin-top: 12px;
+      letter-spacing: 3px;
+      color: var(--gray);
+    }
+
+    .products {
+      background: var(--white);
+      padding: 80px 6%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+
+    .card {
+      padding: 30px;
+      border: 1px solid #eee;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      letter-spacing: 2px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      background: var(--black);
+      color: var(--white);
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      Whisker's
+      <span>The Men's Code</span>
+    </div>
+
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">PRODUCTS</a>
+      <a href="#">BLOG</a>
+      <a href="#">CONTACT</a>
+    </nav>
+
+    <div class="icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-shopping-cart" onclick="goToPayment()"></i>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>The Men’s Code</h1>
+      <p>PREMIUM BEARD CARE FOR THE MODERN MAN</p>
+    </div>
+  </section>
+
+  <section class="products">
+
+    <div class="card">
+      <img src="https://via.placeholder.com/180x220?text=beardex" alt="Beard Oil">
+      <h3>BEARD OIL</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/180x160?text=beardex" alt="Beard Balm">
+      <h3>BEARD BALM</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/180x240?text=beardex" alt="Beard Wash">
+      <h3>BEARD WASH</h3>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Whisker's — The Men’s Code
+  </footer>
+
+  <script>
+    function goToPayment() {
+      const paymentURL = "https://YOUR_PAYMENT_LINK_HERE";
+      window.location.href = paymentURL;
+    }
+  </script>
+
+</body>
+</html>
